@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script> 
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>e-Bunsiness Card</title>
+</head>
+<body>
+    <header class="header-box">
+    </header>
+    <div class="display-box">
+    </div>
+</body>
+</html>
+
+
+<script id="header-template" type="text/x-lodash-template">
+    <h1>
+        <%= name %>
+    </h1>
+</script>
+
+<script id="card-template" class="card-flex" type="text/x-lodash-template">
+    <div class="bio-container h-card">
+        <div class="left-panel">
+            <h2>
+                The Basics
+            </h2>
+            <div class="info-box">
+                <p class="p-name"><%= name %></p>
+                <a class="u-url" href="<%= html_url %>"><%= html_url %></a>
+                <p class="p-job-title"><%= company %></p>
+                <a href="#" class="u-url"><%= blog %></a>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h2>
+                The Story
+            </h2>
+            <div class="right-sub">
+                <div class="story">
+                    <p class="p-note"><%= bio %></p>
+                </div>
+                <div class="img-box">
+                    <img class="u-photo" src="<%= avatar_url %>"
+                <div>
+            </div>
+        </div>
+    </div>
+</script>
